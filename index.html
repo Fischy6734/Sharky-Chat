@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ably Chat</title>
+    <!-- Include required SDKs -->
+    <script src="https://cdn.ably.com/lib/ably.min-2.js"></script>
+    <script src="https://cdn.ably.com/lib/ably-chat.umd.cjs-0.js"></script>
+</head>
+<body>
+    <!-- Add the chat component -->
+    <ably-chat data-api-key="3EFpeQ.DhVB7Q:CkOeeas7kPvQ91OQu_m4eA9a9S-2u74qB1zZ9uIJTjQ"></ably-chat>
+
+    <script>
+        const realtime = new Ably.Realtime({ 
+            key: '3EFpeQ.DhVB7Q:CkOeeas7kPvQ91OQu_m4eA9a9S-2u74qB1zZ9uIJTjQ',
+            clientId: 'user-' + Math.random().toString(36).substr(2, 9)
+        });
+        const chatClient = new AblyChat.ChatClient(realtime);
+    </script>
+</body>
+</html>
